@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply — Sentinel Accelerator</title>
+    <meta name="description"
+        content="Apply to Sentinel Accelerator — an 8-week program for serious student founders in New Jersey and New York." />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="Sentinel Accelerator"
+                    onerror="this.parentNode.innerHTML='<span style=\'font-weight:800;font-size:1.1rem;letter-spacing:-0.02em\'>SENTINEL</span>'" />
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="apply.html">Apply</a>
+                <a href="apply.html" class="btn btn-primary">Apply Now</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- APPLY HERO -->
+    <div class="apply-hero">
+        <div class="container">
+            <div class="tag reveal">Applications Open</div>
+            <h1 class="reveal reveal-delay-1">Apply to Sentinel Accelerator</h1>
+            <p class="reveal reveal-delay-2">Applications are open for serious student founders ready to commit to an
+                8-week accelerator experience. We review on a rolling basis — apply early.</p>
+            <div class="apply-meta reveal reveal-delay-3">
+                <span class="apply-meta-tag">8-week program</span>
+                <span class="apply-meta-tag">Online sessions</span>
+                <span class="apply-meta-tag">~10 hrs / week</span>
+                <span class="apply-meta-tag">Startup idea required</span>
+                <span class="apply-meta-tag">Teams preferred, solo OK</span>
+                <span class="apply-meta-tag">YouTube pitch required</span>
+                <span class="apply-meta-tag">Rolling review</span>
+                <span class="apply-meta-tag">Final deadline: May 31, 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORM SECTION -->
+    <div class="apply-form-section">
+        <div class="container">
+            <div class="form-wrap">
+
+                <!-- EQUITY NOTICE -->
+                <div class="equity-notice reveal">
+                    <p><strong>Equity disclosure:</strong> Sentinel Accelerator takes a small equity stake in companies
+                        that complete the program. This aligns our success with yours — we are committed to helping you
+                        build something real.</p>
+                </div>
+
+                <!-- PROGRESS BAR -->
+                <div class="progress-bar reveal reveal-delay-1" id="progress-bar">
+                    <div class="progress-step">
+                        <div class="progress-dot active" id="dot-1">1</div>
+                    </div>
+                    <div class="progress-line" id="line-1"></div>
+                    <div class="progress-step">
+                        <div class="progress-dot" id="dot-2">2</div>
+                    </div>
+                    <div class="progress-line" id="line-2"></div>
+                    <div class="progress-step">
+                        <div class="progress-dot" id="dot-3">3</div>
+                    </div>
+                    <div class="progress-line" id="line-3"></div>
+                    <div class="progress-step">
+                        <div class="progress-dot" id="dot-4">4</div>
+                    </div>
+                    <div class="progress-line" id="line-4"></div>
+                    <div class="progress-step">
+                        <div class="progress-dot" id="dot-5">5</div>
+                    </div>
+                    <div class="progress-line" id="line-5"></div>
+                    <div class="progress-step">
+                        <div class="progress-dot" id="dot-6">6</div>
+                    </div>
+                </div>
+
+                <!-- FORM -->
+                <form id="apply-form">
+
+                    <!-- STEP 1: FOUNDER INFO -->
+                    <div class="step-panel active" id="step-1">
+                        <div class="step-title">Founder Information</div>
+                        <div class="step-subtitle">Tell us about yourself.</div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="full-name">Full Name *</label>
+                                <input type="text" id="full-name" placeholder="Your full name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" placeholder="your@email.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+1 (555) 000-0000" />
+                            </div>
+                            <div class="form-group">
+                                <label for="school">School / University *</label>
+                                <input type="text" id="school" placeholder="e.g. Rutgers University" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="grad-year">Expected Graduation Year *</label>
+                                <select id="grad-year" required>
+                                    <option value="" disabled selected>Select year</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                    <option>2028</option>
+                                    <option>2029</option>
+                                    <option>2030+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(1)">Continue
+                                →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: STARTUP INFO -->
+                    <div class="step-panel" id="step-2">
+                        <div class="step-title">Startup Information</div>
+                        <div class="step-subtitle">Tell us about your idea.</div>
+                        <div class="form-group">
+                            <label for="startup-name">Startup / Project Name *</label>
+                            <input type="text" id="startup-name" placeholder="What do you call it?" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="describe">Describe your idea *</label>
+                            <textarea id="describe" placeholder="What are you building? Keep it clear and direct."
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="problem">What problem are you solving? *</label>
+                            <textarea id="problem" placeholder="Who has this problem? How painful is it?"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="industry">Industry *</label>
+                            <select id="industry" required>
+                                <option value="" disabled selected>Select industry</option>
+                                <option>SaaS / Software</option>
+                                <option>Fintech</option>
+                                <option>Healthcare / Biotech</option>
+                                <option>Consumer</option>
+                                <option>Marketplace</option>
+                                <option>Hardware / Deep Tech</option>
+                                <option>Education</option>
+                                <option>AI / Machine Learning</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="why-now">Why now? *</label>
+                            <textarea id="why-now" placeholder="What's changed that makes this the right time?"
+                                required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(2)">← Back</button>
+                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(2)">Continue
+                                →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: TEAM -->
+                    <div class="step-panel" id="step-3">
+                        <div class="step-title">Your Team</div>
+                        <div class="step-subtitle">Tell us who's building with you.</div>
+                        <div class="form-group">
+                            <label>Are you applying solo or as a team?</label>
+                            <div class="radio-group">
+                                <label class="radio-opt"><input type="radio" name="team-type" value="solo" /> Solo
+                                    founder</label>
+                                <label class="radio-opt"><input type="radio" name="team-type" value="team" />
+                                    Team</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="team-size">Team size (including you)</label>
+                            <select id="team-size">
+                                <option value="" disabled selected>Select</option>
+                                <option>1 (solo)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="team-members">Team member names and roles (if applicable)</label>
+                            <textarea id="team-members"
+                                placeholder="e.g. Jane Smith — CTO, John Doe — Head of Design"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(3)">← Back</button>
+                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(3)">Continue
+                                →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: COMMITMENT -->
+                    <div class="step-panel" id="step-4">
+                        <div class="step-title">Commitment</div>
+                        <div class="step-subtitle">We want to understand your level of seriousness.</div>
+                        <div class="form-group">
+                            <label for="why-sentinel">Why do you want to join Sentinel? *</label>
+                            <textarea id="why-sentinel"
+                                placeholder="Be specific. What are you hoping to get out of this? What are you building toward?"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Are you prepared to commit approximately 10 hours per week for 8 weeks? *</label>
+                            <div class="radio-group">
+                                <label class="radio-opt"><input type="radio" name="time-commit" value="yes" required />
+                                    Yes</label>
+                                <label class="radio-opt"><input type="radio" name="time-commit" value="mostly" /> I'll
+                                    do my best</label>
+                                <label class="radio-opt"><input type="radio" name="time-commit" value="no" /> No</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Are you willing to continue pursuing the venture if serious investor interest
+                                emerges? *</label>
+                            <div class="radio-group">
+                                <label class="radio-opt"><input type="radio" name="investor-commit" value="yes"
+                                        required /> Yes</label>
+                                <label class="radio-opt"><input type="radio" name="investor-commit" value="unsure" />
+                                    Unsure</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(4)">← Back</button>
+                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(4)">Continue
+                                →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5: LINKS -->
+                    <div class="step-panel" id="step-5">
+                        <div class="step-title">Links &amp; Pitch</div>
+                        <div class="step-subtitle">Help us learn more about you and your startup.</div>
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn Profile</label>
+                            <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourname" />
+                        </div>
+                        <div class="form-group">
+                            <label for="deck-link">Deck / Demo / Website (optional)</label>
+                            <input type="url" id="deck-link"
+                                placeholder="Optional — share if you have something to show" />
+                        </div>
+                        <div class="form-group">
+                            <label for="pitch-video">YouTube Pitch Video Link *</label>
+                            <input type="url" id="pitch-video" placeholder="https://youtube.com/watch?v=..." required />
+                            <p style="font-size:0.8rem; color:var(--text-dim); margin-top:8px;">Please keep your pitch
+                                video under 3 minutes. Cover: what you're building, who it's for, and why you. Unlisted
+                                videos are fine.</p>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(5)">← Back</button>
+                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(5)">Continue
+                                →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 6: SUBMIT -->
+                    <div class="step-panel" id="step-6">
+                        <div class="step-title">Review &amp; Submit</div>
+                        <div class="step-subtitle">Almost there. Please review the equity disclosure before submitting.
+                        </div>
+                        <div class="equity-notice" style="margin-bottom: 24px;">
+                            <p><strong>Equity:</strong> By submitting this application, you acknowledge that Sentinel
+                                Accelerator takes a small equity stake in companies that complete the program. This is
+                                disclosed upfront and reflects our commitment to your long-term success.</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="equity-confirm" required />
+                                <label for="equity-confirm">I understand and acknowledge the equity terms described
+                                    above.</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="commitment-confirm" required />
+                                <label for="commitment-confirm">I confirm that the information provided in this
+                                    application is accurate.</label>
+                            </div>
+                        </div>
+                        <div class="form-row" style="margin-top: 32px;">
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(6)">← Back</button>
+                            <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">Submit Application
+                                →</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- SUCCESS STATE -->
+                <div class="submit-success" id="submit-success">
+                    <div class="success-icon">✓</div>
+                    <div class="success-title">Application received.</div>
+                    <p class="success-text">Thank you for applying to Sentinel Accelerator. Our team reviews
+                        applications on a rolling basis. If your application moves forward, we will contact you about
+                        the next step.</p>
+                    <div class="success-social">
+                        <a href="https://instagram.com" target="_blank" class="btn btn-secondary">Follow on
+                            Instagram</a>
+                        <a href="https://tiktok.com" target="_blank" class="btn btn-secondary">Follow on TikTok</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Sentinel Accelerator"
+                        onerror="this.parentNode.innerHTML='<span style=\'font-weight:800;font-size:1.05rem;letter-spacing:-0.02em;display:block;margin-bottom:12px\'>SENTINEL</span>'" />
+                    <p class="footer-mission">Helping serious student founders turn ideas into real companies.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.17a8.18 8.18 0 004.79 1.53V7.26a4.85 4.85 0 01-1.02-.57z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="apply.html">Apply</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:ap2195@scarletmail.rutgers.edu">ap2195@scarletmail.rutgers.edu</a></li>
+                        <li><a href="https://sentinelaccelerators.org" target="_blank">sentinelaccelerators.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Sentinel Accelerator. All rights reserved.</span>
+                <a href="mailto:ap2195@scarletmail.rutgers.edu">ap2195@scarletmail.rutgers.edu</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+        setTimeout(() => document.querySelectorAll('.apply-hero .reveal').forEach(el => el.classList.add('visible')), 100);
+
+        // Multi-step form
+        let currentStep = 1;
+        const totalSteps = 6;
+
+        function updateProgress(step) {
+            for (let i = 1; i <= totalSteps; i++) {
+                const dot = document.getElementById(`dot-${i}`);
+                if (i < step) { dot.className = 'progress-dot done'; dot.textContent = '✓'; }
+                else if (i === step) { dot.className = 'progress-dot active'; dot.textContent = i; }
+                else { dot.className = 'progress-dot'; dot.textContent = i; }
+            }
+            for (let i = 1; i < totalSteps; i++) {
+                const line = document.getElementById(`line-${i}`);
+                line.className = i < step ? 'progress-line done' : 'progress-line';
+            }
+        }
+
+        function showStep(step) {
+            document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+            document.getElementById(`step-${step}`).classList.add('active');
+            updateProgress(step);
+            currentStep = step;
+            window.scrollTo({ top: document.querySelector('.apply-form-section').offsetTop - 80, behavior: 'smooth' });
+        }
+
+        function nextStep(from) { if (from < totalSteps) showStep(from + 1); }
+        function prevStep(from) { if (from > 1) showStep(from - 1); }
+
+        // Form submission
+        document.getElementById('apply-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('apply-form').style.display = 'none';
+            document.getElementById('progress-bar').style.display = 'none';
+            document.querySelector('.equity-notice').style.display = 'none';
+            const success = document.getElementById('submit-success');
+            success.classList.add('shown');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

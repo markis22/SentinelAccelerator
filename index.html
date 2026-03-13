@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentinel Accelerator — Turning Student Founders into Real Companies</title>
+  <meta name="description" content="An 8-week accelerator for serious student founders in New Jersey and New York. Build your startup, get mentorship, and pitch at Summit X." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Hero video placeholder gradient */
+    .hero-video-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 50%, #0d0d0d 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-video-placeholder-text {
+      text-align: center;
+    }
+    .hero-video-placeholder-text span {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .process-steps { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Sentinel Accelerator" onerror="this.parentNode.innerHTML='<span style=\'font-weight:800;font-size:1.1rem;letter-spacing:-0.02em\'>SENTINEL</span>'"/>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="apply.html">Apply</a>
+      <a href="apply.html" class="btn btn-primary">Apply Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">
+      <div class="hero-dot"></div>
+      <span>New Jersey &amp; New York · 8-Week Cohort Program</span>
+    </div>
+    <h1 class="reveal reveal-delay-1">Turn your startup idea<br/>into a real company.</h1>
+    <p class="reveal reveal-delay-2">An 8-week accelerator for serious student founders — built to help you develop your idea, learn from experienced mentors, and pitch at Summit X.</p>
+    <div class="hero-btns reveal reveal-delay-3">
+      <a href="apply.html" class="btn btn-primary btn-lg">Apply Now</a>
+      <a href="#program" class="btn btn-secondary btn-lg">Learn More</a>
+    </div>
+    <div class="hero-video reveal reveal-delay-4" id="hero-video-trigger">
+      <div class="hero-video-placeholder">
+        <div class="hero-video-placeholder-text">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.05)"/><path d="M20 16l14 8-14 8V16z" fill="rgba(255,255,255,0.5)"/></svg>
+          <span>Sentinel Accelerator — Program Overview</span>
+        </div>
+      </div>
+      <div class="hero-video-overlay">
+        <div class="play-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="video-modal">
+  <div class="video-modal-inner">
+    <button class="video-close" id="video-close">✕</button>
+    <iframe id="video-iframe" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="container">
+    <div class="problem-inner">
+      <div>
+        <div class="section-label reveal">The Problem</div>
+        <h2 class="reveal reveal-delay-1">Most student founders don't fail from lack of ambition.</h2>
+        <div class="stat-divider reveal reveal-delay-2"></div>
+        <div class="problem-stat reveal reveal-delay-2">
+          <span class="problem-stat-num">Early.</span>
+          <span class="problem-stat-label">The real gap happens before any investor meeting — in the first months of building alone.</span>
+        </div>
+        <div class="problem-stat reveal reveal-delay-3">
+          <span class="problem-stat-num">Access.</span>
+          <span class="problem-stat-label">Most student founders can't easily reach the mentors, operators, and networks that accelerate real companies.</span>
+        </div>
+        <div class="problem-stat reveal reveal-delay-4">
+          <span class="problem-stat-num">Structure.</span>
+          <span class="problem-stat-label">Without a framework for building, brilliant ideas stay ideas. Sentinel provides the structure that turns ambition into traction.</span>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="card" style="margin-bottom: 20px;">
+          <p style="font-size: 1.15rem; font-weight: 500; color: var(--text); line-height: 1.65; font-style: italic;">"They fail because they lack the right guidance, network, structure, and support early enough."</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Sentinel closes that gap.</div>
+          <p class="card-desc">We give serious student founders the structure, mentorship, and investor access they need — at the exact right moment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM OVERVIEW -->
+<section id="program">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">The Program</div>
+      <h2 class="reveal reveal-delay-1">What is Sentinel Accelerator?</h2>
+      <p class="reveal reveal-delay-2" style="max-width: 600px; margin: 0 auto;">An 8-week accelerator built for serious student founders who already have a startup idea and want to turn it into something real.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal reveal-delay-1">
+        <div class="card-icon">🎯</div>
+        <div class="card-title">Mentorship</div>
+        <p class="card-desc">Direct access to founders, operators, and executives who have built real companies and are invested in your success.</p>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="card-icon">🧭</div>
+        <div class="card-title">Founder Guidance</div>
+        <p class="card-desc">Structured advice from people who've been through the early stages of building. Frameworks that actually apply to your situation.</p>
+      </div>
+      <div class="card reveal reveal-delay-3">
+        <div class="card-icon">⚡</div>
+        <div class="card-title">Weekly Sessions</div>
+        <p class="card-desc">Focused weekly sessions that push your company forward week over week — from idea validation to pitch-ready execution.</p>
+      </div>
+      <div class="card reveal reveal-delay-4">
+        <div class="card-icon">🏆</div>
+        <div class="card-title">Summit X</div>
+        <p class="card-desc">The program culminates in Summit X — a high-stakes pitch event where selected founders present to real investors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO SHOULD APPLY -->
+<section id="who">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">Selectivity</div>
+      <h2 class="reveal reveal-delay-1">This program is built for the right founders.</h2>
+      <p class="reveal reveal-delay-2" style="max-width: 560px; margin: 0 auto;">Sentinel is intentionally selective. We work with a small group of serious founders each cohort to ensure real, focused attention.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card for reveal reveal-delay-1">
+        <h3 class="for-label">This is for you if —</h3>
+        <ul class="who-list">
+          <li>You have a startup idea you're serious about pursuing</li>
+          <li>You're ready to build, not just explore</li>
+          <li>You can commit real time — approximately 10 hours per week</li>
+          <li>You want structured mentorship and investor exposure</li>
+          <li>You're a solo founder or a team that's ready to move</li>
+        </ul>
+      </div>
+      <div class="who-card not reveal reveal-delay-2">
+        <h3 class="not-label">This may not be the right fit if —</h3>
+        <ul class="who-list">
+          <li>You're still in the early brainstorming phase without a clear idea</li>
+          <li>You're looking for a passive, low-commitment experience</li>
+          <li>You're not prepared to dedicate serious time to building</li>
+          <li>You're looking for a casual campus club or social network</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT FOUNDERS GET -->
+<section id="features">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">What You Get</div>
+      <h2 class="reveal reveal-delay-1">Everything a serious founder needs to move fast.</h2>
+      <p class="reveal reveal-delay-2" style="max-width: 580px; margin: 0 auto;">Sentinel is not a lecture series. It's a structured, hands-on accelerator built to produce real outcomes.</p>
+    </div>
+    <div class="features-grid">
+      <div class="card reveal reveal-delay-1">
+        <div class="card-icon">📅</div>
+        <div class="card-title">Weekly Founder Sessions</div>
+        <p class="card-desc">Structured weekly sessions designed to push your startup forward with accountability and momentum each week.</p>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="card-icon">🛠</div>
+        <div class="card-title">Hands-On Startup Guidance</div>
+        <p class="card-desc">Actionable frameworks and direct feedback on your business — from idea refinement through go-to-market strategy.</p>
+      </div>
+      <div class="card reveal reveal-delay-3">
+        <div class="card-icon">👥</div>
+        <div class="card-title">Mentor Access</div>
+        <p class="card-desc">Connect with experienced founders and operators who provide real guidance, not generic advice.</p>
+      </div>
+      <div class="card reveal reveal-delay-1">
+        <div class="card-icon">🎤</div>
+        <div class="card-title">Pitch Preparation</div>
+        <p class="card-desc">Dedicated preparation for Summit X — including pitch refinement, storytelling coaching, and investor-facing positioning.</p>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">Founder Network</div>
+        <p class="card-desc">Join a community of serious student founders who will be your peers, collaborators, and co-builders long after the cohort ends.</p>
+      </div>
+      <div class="card reveal reveal-delay-3">
+        <div class="card-icon">💼</div>
+        <div class="card-title">Summit X Investor Exposure</div>
+        <p class="card-desc">The most selective founders present at Summit X — a curated pitch event with real investors in the room.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">8 Weeks</div>
+      <h2 class="reveal reveal-delay-1">From application to investor stage.</h2>
+      <p class="reveal reveal-delay-2" style="max-width: 540px; margin: 0 auto;">A structured 8-week journey — designed to compress years of trial-and-error into a focused, outcome-oriented sprint.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-content reveal">
+          <div class="tl-num">Stage 01</div>
+          <div class="tl-title">Apply</div>
+          <div class="tl-desc">Submit your application with a short pitch video. Applications are reviewed on a rolling basis starting March 16, 2026.</div>
+        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-empty"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content reveal">
+          <div class="tl-num">Stage 02</div>
+          <div class="tl-title">Selection</div>
+          <div class="tl-desc">A small group of serious founders are selected per cohort. Selectivity is intentional — every seat matters.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-content reveal">
+          <div class="tl-num">Stage 03</div>
+          <div class="tl-title">Weekly Sessions</div>
+          <div class="tl-desc">Eight weeks of focused online sessions covering validation, strategy, product, fundraising, and storytelling.</div>
+        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-empty"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content reveal">
+          <div class="tl-num">Stage 04</div>
+          <div class="tl-title">Build &amp; Refine</div>
+          <div class="tl-desc">Hands-on mentorship and structured frameworks help you sharpen your idea, validate your market, and build real momentum.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-content reveal">
+          <div class="tl-num">Stage 05</div>
+          <div class="tl-title">Pitch Preparation</div>
+          <div class="tl-desc">Dedicated preparation for Summit X — refining your narrative, your deck, and your ability to communicate your vision to investors.</div>
+        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-empty"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content reveal">
+          <div class="tl-num">Stage 06</div>
+          <div class="tl-title">Summit X</div>
+          <div class="tl-desc">Selected founders take the stage at Summit X and pitch their companies to real investors. This is where the next chapter begins.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTORS -->
+<section id="mentors">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">Mentorship</div>
+      <h2 class="reveal reveal-delay-1">Learn from experienced founders, operators, and executives.</h2>
+      <p class="reveal reveal-delay-2" style="max-width: 580px; margin: 0 auto;">Our mentor network spans multiple industries. Mentor identities are revealed to cohort members — here's the expertise they bring.</p>
+    </div>
+    <div class="mentor-grid">
+      <div class="mentor-card reveal reveal-delay-1">
+        <div class="mentor-icon">🚀</div>
+        <div class="mentor-area">Startup Strategy &amp; Innovation</div>
+        <p class="mentor-desc">Founders and operators who've built and scaled companies from zero. They know what the early stage actually looks like.</p>
+      </div>
+      <div class="mentor-card reveal reveal-delay-2">
+        <div class="mentor-icon">📈</div>
+        <div class="mentor-area">Business Development &amp; Growth</div>
+        <p class="mentor-desc">Executives with experience driving revenue, building partnerships, and scaling go-to-market motions at real companies.</p>
+      </div>
+      <div class="mentor-card reveal reveal-delay-3">
+        <div class="mentor-icon">💰</div>
+        <div class="mentor-area">Finance &amp; Operations</div>
+        <p class="mentor-desc">Operators and finance professionals who help founders understand unit economics, fundraising mechanics, and company structure.</p>
+      </div>
+      <div class="mentor-card reveal reveal-delay-1">
+        <div class="mentor-icon">⚙️</div>
+        <div class="mentor-area">Technology &amp; Engineering</div>
+        <p class="mentor-desc">Senior engineers and CTOs who've built technical products at scale — and know what to build first (and what to skip).</p>
+      </div>
+      <div class="mentor-card reveal reveal-delay-2">
+        <div class="mentor-icon">🏥</div>
+        <div class="mentor-area">Healthcare &amp; Biotech Strategy</div>
+        <p class="mentor-desc">Domain experts in health and life sciences who understand the specific dynamics of building in regulated, high-stakes industries.</p>
+      </div>
+      <div class="mentor-card reveal reveal-delay-3">
+        <div class="mentor-icon">🔬</div>
+        <div class="mentor-area">Research &amp; Commercialization</div>
+        <p class="mentor-desc">Experts who sit at the intersection of academic research and real-world application — turning labs into markets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUMMIT X -->
+<section id="summit">
+  <div class="summit-bg"></div>
+  <div class="container">
+    <div class="summit-inner">
+      <div class="summit-badge reveal">
+        <span>⚡</span> Summit X
+      </div>
+      <h2 class="reveal reveal-delay-1">The pitch event where serious founders meet real investors.</h2>
+      <p class="reveal reveal-delay-2" style="font-size: 1.1rem;">At the end of the cohort, selected founders take the stage at Summit X. It's not a school competition. It's a high-stakes event built to put you in front of people who can actually write a check.</p>
+      <div class="hero-btns reveal reveal-delay-3" style="margin-top: 36px;">
+        <a href="apply.html" class="btn btn-primary btn-lg">Apply for the Next Cohort</a>
+      </div>
+      <div class="summit-stats reveal reveal-delay-4">
+        <div class="summit-stat">
+          <div class="summit-stat-num">8</div>
+          <div class="summit-stat-label">Weeks of preparation</div>
+        </div>
+        <div class="summit-stat">
+          <div class="summit-stat-num">Real</div>
+          <div class="summit-stat-label">Investors in the room</div>
+        </div>
+        <div class="summit-stat">
+          <div class="summit-stat-num">High</div>
+          <div class="summit-stat-label">Stakes. Real outcomes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER STORY PREVIEW -->
+<section id="story">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">Our Story</div>
+      <h2 class="reveal reveal-delay-1">Built by people who've seen how hard it is to build alone.</h2>
+      <p class="reveal reveal-delay-2" style="max-width: 580px; margin: 0 auto;">Sentinel was created by student founders who lived the problem firsthand — and built the program they wish had existed.</p>
+    </div>
+    <div class="story-cards">
+      <div class="story-card reveal reveal-delay-1">
+        <div class="story-initial">A</div>
+        <div class="story-name">Aditya</div>
+        <div class="story-role">Founder</div>
+        <p class="story-text">Founded Sentinel after experiencing firsthand how difficult it was to build a startup in college without the right support. After spending years building access to mentors and investors through sheer perseverance, he created the program he wished had existed on day one.</p>
+      </div>
+      <div class="story-card reveal reveal-delay-2">
+        <div class="story-initial">M</div>
+        <div class="story-name">Mark</div>
+        <div class="story-role">Program</div>
+        <p class="story-text">Helps build the Sentinel program from the ground up and works closely with founders throughout the cohort experience — making sure every participant gets the real, focused support they came for.</p>
+      </div>
+      <div class="story-card reveal reveal-delay-3">
+        <div class="story-initial">D</div>
+        <div class="story-name">Danush</div>
+        <div class="story-role">Community</div>
+        <p class="story-text">Leads recruiting and helps grow the Sentinel founder community — identifying serious builders and bringing together the kind of cohort that makes everyone around them better.</p>
+      </div>
+    </div>
+    <div class="story-cta reveal reveal-delay-4">
+      <a href="about.html" class="btn btn-secondary btn-lg">Read Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">How to Apply</div>
+      <h2 class="reveal reveal-delay-1">A straightforward, selective process.</h2>
+      <p class="reveal reveal-delay-2" style="max-width: 540px; margin: 0 auto;">We review every application carefully. We're looking for seriousness, commitment, and a real idea — not a perfect pitch deck.</p>
+    </div>
+    <div class="process-steps reveal reveal-delay-2">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <div class="process-step-title">Apply</div>
+        <div class="process-step-desc">Submit your application with founder info, startup details, and a short YouTube pitch video.</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <div class="process-step-title">Review</div>
+        <div class="process-step-desc">Our team reviews applications on a rolling basis. Every application is read by a real person.</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <div class="process-step-title">Join the Cohort</div>
+        <div class="process-step-desc">Selected founders are contacted and join a small, focused cohort of serious builders.</div>
+      </div>
+    </div>
+    <div class="process-meta">
+      <div class="process-meta-item reveal reveal-delay-1">
+        <strong>March 16, 2026</strong>
+        <span>Applications open</span>
+      </div>
+      <div class="process-meta-item reveal reveal-delay-2">
+        <strong>May 31, 2026</strong>
+        <span>Final deadline</span>
+      </div>
+      <div class="process-meta-item reveal reveal-delay-3">
+        <strong>Rolling Review</strong>
+        <span>Apply early for best consideration</span>
+      </div>
+      <div class="process-meta-item reveal reveal-delay-4">
+        <strong>Small Cohort</strong>
+        <span>Limited seats per cohort</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">FAQ</div>
+      <h2 class="reveal reveal-delay-1">Common questions.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">Do I need a team to apply?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No. Solo founders are welcome, though teams are encouraged. What matters most is your seriousness and commitment to your idea.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q">How much time does the program require?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Approximately 10 hours per week, including weekly sessions and dedicated founder work time. This is a meaningful commitment — and that's intentional.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-q">Do I need a startup idea before applying?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes. Applicants must already have a startup idea and submit a short pitch video (under 3 minutes) as part of the application. We're not an ideation program — we help you build.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-3">
+        <button class="faq-q">Is the program remote?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes. Weekly sessions are held online, making the program accessible to student founders across New Jersey, New York, and beyond.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-4">
+        <button class="faq-q">What happens at Summit X?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>At the end of the cohort, selected founders pitch their startups to real investors at Summit X — a curated, high-stakes pitch event designed to create real investor connections for serious founders.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-5">
+        <button class="faq-q">Does Sentinel take equity?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes. Sentinel takes a small equity stake in companies that complete the program. This aligns our incentives with your success — we're invested in you building something real, not just graduating from a program.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <div class="final-cta-bg"></div>
+  <div class="container">
+    <div class="final-cta-inner">
+      <div class="tag reveal">Ready?</div>
+      <h2 class="reveal reveal-delay-1">If you're serious about building, this is where you start.</h2>
+      <p class="reveal reveal-delay-2">Apply to Sentinel Accelerator and take your first real step toward building a company.</p>
+      <div class="reveal reveal-delay-3">
+        <a href="apply.html" class="btn btn-primary btn-lg">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Sentinel Accelerator" onerror="this.parentNode.innerHTML='<span style=\'font-weight:800;font-size:1.05rem;letter-spacing:-0.02em;display:block;margin-bottom:12px\'>SENTINEL</span>'"/>
+        <p class="footer-mission">Helping serious student founders turn ideas into real companies.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.17a8.18 8.18 0 004.79 1.53V7.26a4.85 4.85 0 01-1.02-.57z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="apply.html">Apply</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:ap2195@scarletmail.rutgers.edu">ap2195@scarletmail.rutgers.edu</a></li>
+          <li><a href="https://sentinelaccelerators.org" target="_blank">sentinelaccelerators.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sentinel Accelerator. All rights reserved.</span>
+      <a href="mailto:ap2195@scarletmail.rutgers.edu">ap2195@scarletmail.rutgers.edu</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Hero section - immediately visible
+document.querySelectorAll('#hero .reveal').forEach(el => {
+  setTimeout(() => el.classList.add('visible'), 100);
+});
+
+// Video modal
+const videoTrigger = document.getElementById('hero-video-trigger');
+const videoModal = document.getElementById('video-modal');
+const videoIframe = document.getElementById('video-iframe');
+const videoClose = document.getElementById('video-close');
+const VIDEO_ID = 'dQw4w9WgXcQ'; // Replace with actual YouTube video ID
+
+videoTrigger.addEventListener('click', () => {
+  videoIframe.src = `https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1`;
+  videoModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+});
+videoClose.addEventListener('click', closeModal);
+videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeModal(); });
+function closeModal() {
+  videoModal.classList.remove('open');
+  videoIframe.src = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
