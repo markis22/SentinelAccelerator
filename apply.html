@@ -414,12 +414,38 @@
             window.scrollTo({ top: document.querySelector('.apply-form-section').offsetTop - 80, behavior: 'smooth' });
         }
 
-        function nextStep(from) { if (from < totalSteps) showStep(from + 1); }
-        function prevStep(from) { if (from > 1) showStep(from - 1); }
+        // Validate current step before proceeding
+        function validateStep(step) {
+            const currentPanel = document.getElementById(`step-${step}`);
+            const inputs = currentPanel.querySelectorAll('input, select, textarea');
+            for (let input of inputs) {
+                if (!input.checkValidity()) {
+                    input.reportValidity(); // Shows native browser error bubble
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function nextStep(from) {
+            if (validateStep(from) && from < totalSteps) {
+                showStep(from + 1);
+            }
+        }
+
+        function prevStep(from) {
+            if (from > 1) {
+                showStep(from - 1);
+            }
+        }
 
         // Form submission — uses FormData (Formspree's recommended AJAX method)
         document.getElementById('apply-form').addEventListener('submit', async function (e) {
             e.preventDefault();
+
+            // Final validation check just in case
+            if (!validateStep(6)) return;
+
             const submitBtn = document.getElementById('submit-btn');
             const statusEl = document.getElementById('form-status');
             submitBtn.textContent = 'Submitting…';
