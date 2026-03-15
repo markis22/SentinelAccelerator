@@ -12,7 +12,6 @@
 
 <body>
 
-    <!-- NAV -->
     <nav id="navbar">
         <div class="container nav-inner">
             <a href="index.html" class="nav-logo">
@@ -31,7 +30,6 @@
         </div>
     </nav>
 
-    <!-- APPLY HERO -->
     <div class="apply-hero">
         <div class="container">
             <div class="tag reveal">Applications Open</div>
@@ -51,19 +49,16 @@
         </div>
     </div>
 
-    <!-- FORM SECTION -->
     <div class="apply-form-section">
         <div class="container">
             <div class="form-wrap">
 
-                <!-- EQUITY NOTICE -->
                 <div class="equity-notice reveal">
                     <p><strong>Equity disclosure:</strong> Sentinel Accelerator takes a small equity stake in companies
                         that complete the program. This aligns our success with yours — we are committed to helping you
                         build something real.</p>
                 </div>
 
-                <!-- PROGRESS BAR -->
                 <div class="progress-bar reveal reveal-delay-1" id="progress-bar">
                     <div class="progress-step">
                         <div class="progress-dot active" id="dot-1">1</div>
@@ -90,33 +85,34 @@
                     </div>
                 </div>
 
-                <!-- FORM -->
                 <form id="apply-form">
 
-                    <!-- STEP 1: FOUNDER INFO -->
+                    <!-- STEP 1 -->
                     <div class="step-panel active" id="step-1">
                         <div class="step-title">Founder Information</div>
                         <div class="step-subtitle">Tell us about yourself.</div>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="full-name">Full Name *</label>
-                                <input type="text" id="full-name" placeholder="Your full name" required />
+                                <input type="text" id="full-name" name="Full Name" placeholder="Your full name"
+                                    required />
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address *</label>
-                                <input type="email" id="email" placeholder="your@email.com" required />
+                                <input type="email" id="email" name="Email" placeholder="your@email.com" required />
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" placeholder="+1 (555) 000-0000" />
+                                <input type="tel" id="phone" name="Phone" placeholder="+1 (555) 000-0000" />
                             </div>
                             <div class="form-group">
                                 <label for="school">School / University *</label>
-                                <input type="text" id="school" placeholder="e.g. Rutgers University" required />
+                                <input type="text" id="school" name="School" placeholder="e.g. Rutgers University"
+                                    required />
                             </div>
                             <div class="form-group">
                                 <label for="grad-year">Expected Graduation Year *</label>
-                                <select id="grad-year" required>
+                                <select id="grad-year" name="Graduation Year" required>
                                     <option value="" disabled selected>Select year</option>
                                     <option>2025</option>
                                     <option>2026</option>
@@ -133,27 +129,28 @@
                         </div>
                     </div>
 
-                    <!-- STEP 2: STARTUP INFO -->
+                    <!-- STEP 2 -->
                     <div class="step-panel" id="step-2">
                         <div class="step-title">Startup Information</div>
                         <div class="step-subtitle">Tell us about your idea.</div>
                         <div class="form-group">
                             <label for="startup-name">Startup / Project Name *</label>
-                            <input type="text" id="startup-name" placeholder="What do you call it?" required />
+                            <input type="text" id="startup-name" name="Startup Name" placeholder="What do you call it?"
+                                required />
                         </div>
                         <div class="form-group">
                             <label for="describe">Describe your idea *</label>
-                            <textarea id="describe" placeholder="What are you building? Keep it clear and direct."
-                                required></textarea>
+                            <textarea id="describe" name="Idea Description"
+                                placeholder="What are you building? Keep it clear and direct." required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="problem">What problem are you solving? *</label>
-                            <textarea id="problem" placeholder="Who has this problem? How painful is it?"
+                            <textarea id="problem" name="Problem" placeholder="Who has this problem? How painful is it?"
                                 required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="industry">Industry *</label>
-                            <select id="industry" required>
+                            <select id="industry" name="Industry" required>
                                 <option value="" disabled selected>Select industry</option>
                                 <option>SaaS / Software</option>
                                 <option>Fintech</option>
@@ -168,8 +165,8 @@
                         </div>
                         <div class="form-group">
                             <label for="why-now">Why now? *</label>
-                            <textarea id="why-now" placeholder="What's changed that makes this the right time?"
-                                required></textarea>
+                            <textarea id="why-now" name="Why Now"
+                                placeholder="What's changed that makes this the right time?" required></textarea>
                         </div>
                         <div class="form-row">
                             <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(2)">← Back</button>
@@ -178,7 +175,7 @@
                         </div>
                     </div>
 
-                    <!-- STEP 3: TEAM -->
+                    <!-- STEP 3 -->
                     <div class="step-panel" id="step-3">
                         <div class="step-title">Your Team</div>
                         <div class="step-subtitle">Tell us who's building with you.</div>
@@ -193,7 +190,7 @@
                         </div>
                         <div class="form-group">
                             <label for="team-size">Team size (including you)</label>
-                            <select id="team-size">
+                            <select id="team-size" name="Team Size">
                                 <option value="" disabled selected>Select</option>
                                 <option>1 (solo)</option>
                                 <option>2</option>
@@ -203,7 +200,7 @@
                         </div>
                         <div class="form-group">
                             <label for="team-members">Team member names and roles (if applicable)</label>
-                            <textarea id="team-members"
+                            <textarea id="team-members" name="Team Members"
                                 placeholder="e.g. Jane Smith — CTO, John Doe — Head of Design"></textarea>
                         </div>
                         <div class="form-row">
@@ -213,13 +210,13 @@
                         </div>
                     </div>
 
-                    <!-- STEP 4: COMMITMENT -->
+                    <!-- STEP 4 -->
                     <div class="step-panel" id="step-4">
                         <div class="step-title">Commitment</div>
                         <div class="step-subtitle">We want to understand your level of seriousness.</div>
                         <div class="form-group">
                             <label for="why-sentinel">Why do you want to join Sentinel? *</label>
-                            <textarea id="why-sentinel"
+                            <textarea id="why-sentinel" name="Why Sentinel"
                                 placeholder="Be specific. What are you hoping to get out of this? What are you building toward?"
                                 required></textarea>
                         </div>
@@ -250,22 +247,24 @@
                         </div>
                     </div>
 
-                    <!-- STEP 5: LINKS -->
+                    <!-- STEP 5 -->
                     <div class="step-panel" id="step-5">
                         <div class="step-title">Links &amp; Pitch</div>
                         <div class="step-subtitle">Help us learn more about you and your startup.</div>
                         <div class="form-group">
                             <label for="linkedin">LinkedIn Profile</label>
-                            <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourname" />
+                            <input type="url" id="linkedin" name="LinkedIn"
+                                placeholder="https://linkedin.com/in/yourname" />
                         </div>
                         <div class="form-group">
                             <label for="deck-link">Deck / Demo / Website (optional)</label>
-                            <input type="url" id="deck-link"
+                            <input type="url" id="deck-link" name="Deck or Demo Link"
                                 placeholder="Optional — share if you have something to show" />
                         </div>
                         <div class="form-group">
                             <label for="pitch-video">YouTube Pitch Video Link *</label>
-                            <input type="url" id="pitch-video" placeholder="https://youtube.com/watch?v=..." required />
+                            <input type="url" id="pitch-video" name="YouTube Pitch Video"
+                                placeholder="https://youtube.com/watch?v=..." required />
                             <p style="font-size:0.8rem; color:var(--text-dim); margin-top:8px;">Please keep your pitch
                                 video under 3 minutes. Cover: what you're building, who it's for, and why you. Unlisted
                                 videos are fine.</p>
@@ -277,7 +276,7 @@
                         </div>
                     </div>
 
-                    <!-- STEP 6: SUBMIT -->
+                    <!-- STEP 6 -->
                     <div class="step-panel" id="step-6">
                         <div class="step-title">Review &amp; Submit</div>
                         <div class="step-subtitle">Almost there. Please review the equity disclosure before submitting.
@@ -328,7 +327,6 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-top">
@@ -425,7 +423,6 @@
             submitBtn.textContent = 'Submitting…';
             submitBtn.disabled = true;
 
-            // Collect all form field values
             const data = {
                 'Full Name': document.getElementById('full-name').value,
                 'Email': document.getElementById('email').value,
@@ -440,11 +437,11 @@
                 'Team Size': document.getElementById('team-size').value,
                 'Team Members': document.getElementById('team-members').value,
                 'Why Sentinel': document.getElementById('why-sentinel').value,
-                'Time Commitment': document.querySelector('input[name="time-commit"]:checked')?.value || '',
-                'Investor Commitment': document.querySelector('input[name="investor-commit"]:checked')?.value || '',
+                'Time Commitment': document.querySelector('input[name="time-commit"]:checked')?.value || 'Not selected',
+                'Investor Commitment': document.querySelector('input[name="investor-commit"]:checked')?.value || 'Not selected',
                 'LinkedIn': document.getElementById('linkedin').value,
-                'Deck/Demo Link': document.getElementById('deck-link').value,
-                'YouTube Pitch Video': document.getElementById('pitch-video').value,
+                'Deck or Demo Link': document.getElementById('deck-link').value,
+                'YouTube Pitch Video': document.getElementById('pitch-video').value
             };
 
             try {
@@ -453,6 +450,7 @@
                     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify(data)
                 });
+
                 if (response.ok) {
                     document.getElementById('apply-form').style.display = 'none';
                     document.getElementById('progress-bar').style.display = 'none';
@@ -462,7 +460,7 @@
                 } else {
                     submitBtn.textContent = 'Submit Application →';
                     submitBtn.disabled = false;
-                    alert('Something went wrong. Please try again or email us directly.');
+                    alert('Something went wrong. Please try again or email us at ap2195@scarletmail.rutgers.edu');
                 }
             } catch (err) {
                 submitBtn.textContent = 'Submit Application →';
