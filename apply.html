@@ -164,16 +164,22 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="why-now">Why now? Tell us What traction or validation do you have so far, and 
+                            <label for="problem">Who are your target customers or users? *</label>
+                            <textarea id="problem" name="Problem" placeholder="Who has this problem? How painful is it?"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="problem">How big is this market or opportunity? *</label>
+                            <textarea id="problem" name="Problem" placeholder="Who has this problem? How painful is it?"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="why-now">Why now? Tell us, what traction or validation do you have so far, and 
                                 How did you get it? Also, describe what steps you and your team members are taking in 
-                                your life or career that would prove that you are all able to commit to your business *</label>
+                                your life or career that would prove that you are all able to commit to your business 
+                                (200 words max) *</label>
                             <textarea id="why-now" name="Why Now"
                                 placeholder="What's changed that makes this the right time?" required></textarea>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(2)">← Back</button>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(2)">Continue
-                                →</button>
                         </div>
                         <div class="form-group">
                             <label for="startup-name">Who are your competitors *</label>
@@ -205,6 +211,11 @@
                             <label for="problem">What is your biggest challenge right now? *</label>
                             <textarea id="problem" name="Problem" placeholder="Connections? Resources? Preparedness? Team?"
                                 required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(2)">← Back</button>
+                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(2)">Continue
+                                →</button>
                         </div>
                     </div>
 
