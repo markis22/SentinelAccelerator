@@ -164,7 +164,9 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="why-now">Why now? *</label>
+                            <label for="why-now">Why now? Tell us What traction or validation do you have so far, and 
+                                How did you get it? Also, describe what steps you and your team members are taking in 
+                                your life or career that would prove that you are all able to commit to your business *</label>
                             <textarea id="why-now" name="Why Now"
                                 placeholder="What's changed that makes this the right time?" required></textarea>
                         </div>
@@ -172,6 +174,37 @@
                             <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(2)">← Back</button>
                             <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(2)">Continue
                                 →</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="startup-name">Who are your competitors *</label>
+                            <input type="text" id="startup-name" name="Startup Name" placeholder="What are there names?"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label for="problem">What’s innovative or differentiated about your solution? *</label>
+                            <textarea id="problem" name="Problem" placeholder="Who has this problem? How painful is it?"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="industry">What stage is your team is at *</label>
+                            <select id="industry" name="Industry" required>
+                                <option value="" disabled selected>Select stage </option>
+                                <option>Just an idea </option>
+                                <option>Built a prototype</option>
+                                <option>Files or received a patent / Biotech</option>
+                                <option>Generating revenue </option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="team-members">If you answered "other" above, please explain here</label>
+                            <textarea id="team-members" name="Team Members"
+                                placeholder="e.g. Jane Smith — CTO, John Doe — Head of Design"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="problem">What is your biggest challenge right now? *</label>
+                            <textarea id="problem" name="Problem" placeholder="Connections? Resources? Preparedness? Team?"
+                                required></textarea>
                         </div>
                     </div>
 
@@ -199,9 +232,9 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="team-members">Team member names and roles (if applicable)</label>
-                            <textarea id="team-members" name="Team Members"
-                                placeholder="e.g. Jane Smith — CTO, John Doe — Head of Design"></textarea>
+                            <label for="startup-name">Why is your team the right one to build this?  Highlight relevant background or connection  *</label>
+                            <input type="text" id="startup-name" name="Startup Name" placeholder="What are there names?"
+                                required />
                         </div>
                         <div class="form-row">
                             <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(3)">← Back</button>
