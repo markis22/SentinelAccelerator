@@ -2,532 +2,672 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apply — Sentinel Accelerator</title>
-    <meta name="description"
-        content="Apply to Sentinel Accelerator — an 8-week program for serious student founders in New Jersey and New York." />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentinel Accelerator — Turning Student Founders into Real Companies</title>
+  <meta name="description"
+    content="An 8-week accelerator for serious student founders in New Jersey and New York. Build your startup, get mentorship, and pitch at Summit X." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Hero video placeholder gradient */
+    .hero-video-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 50%, #0d0d0d 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video-placeholder-text {
+      text-align: center;
+    }
+
+    .hero-video-placeholder-text span {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-steps {
+        gap: 24px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <nav id="navbar">
-        <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="Sentinel Accelerator"
-                    onerror="this.parentNode.innerHTML='<span style=\'font-weight:800;font-size:1.1rem;letter-spacing:-0.02em\'>SENTINEL</span>'" />
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Sentinel Accelerator"
+          onerror="this.parentNode.innerHTML='<span style=\'font-weight:800;font-size:1.1rem;letter-spacing:-0.02em\'>SENTINEL</span>'" />
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="apply.html">Apply</a>
+        <a href="apply.html" class="btn btn-primary">Apply Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <div class="hero-dot"></div>
+        <span>New Jersey &amp; New York · 8-Week Cohort Program</span>
+      </div> 
+      <div class="flex flex-col space-y-6"> 
+        <h1 class="reveal reveal-delay-1">Turn your startup idea<br />
+          into a real company.</h1> 
+        <p class="reveal reveal-delay-2">An 8-week accelerator for serious
+          student founders — built to help you develop your idea, learn from 
+          experienced mentors, and pitch at Summit X.</p> </div> 
+      <div class="hero-btns reveal reveal-delay-3" style="margin-bottom: 80px;"> 
+        <a href="apply.html" class="btn btn-primary btn-lg">Apply Now</a> 
+        <a href="#program" class="btn btn-secondary btn-lg">Learn More</a> </div>
+      <div class="hero-video reveal reveal-delay-4"
+        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); width: 100%; max-width: 900px; margin: 0 auto;">
+        <iframe src="https://www.youtube.com/embed/f5QrVZ1hHr8?rel=0&modestbranding=1" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="container">
+      <div class="problem-inner">
+        <div>
+          <div class="section-label reveal">The Problem</div>
+          <h2 class="reveal reveal-delay-1">Most student founders don't fail from lack of ambition.</h2>
+          <div class="stat-divider reveal reveal-delay-2"></div>
+          <div class="problem-stat reveal reveal-delay-2">
+            <span class="problem-stat-num">Early.</span>
+            <span class="problem-stat-label">The real gap happens before any investor meeting, in the first months of
+              building alone.</span>
+          </div>
+          <div class="problem-stat reveal reveal-delay-3">
+            <span class="problem-stat-num">Access.</span>
+            <span class="problem-stat-label">Most student founders can't easily reach the mentors, operators, and
+              networks that accelerate real companies.</span>
+          </div>
+          <div class="problem-stat reveal reveal-delay-4">
+            <span class="problem-stat-num">Structure.</span>
+            <span class="problem-stat-label">Without a framework for building, brilliant ideas stay ideas. Sentinel
+              provides the structure that turns ambition into traction.</span>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="card" style="margin-bottom: 20px;">
+            <p style="font-size: 1.15rem; font-weight: 500; color: var(--text); line-height: 1.65; font-style: italic;">
+              "They fail because they lack the right guidance, network, structure, and support early enough."</p>
+          </div>
+          <div class="card">
+            <div class="card-title">Sentinel closes that gap.</div>
+            <p class="card-desc">We give serious student founders the structure, mentorship, and investor access they
+              need, at the exact right moment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM OVERVIEW -->
+  <section id="program">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag reveal">The Program</div>
+        <h2 class="reveal reveal-delay-1">What is Sentinel Accelerator?</h2>
+        <p class="reveal reveal-delay-2" style="max-width: 600px; margin: 0 auto;">An 8-week accelerator built for
+          serious student founders who already have a startup idea and want to turn it into something real.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">🎯</div>
+          <div class="card-title">Mentorship</div>
+          <p class="card-desc">Direct access to founders, operators, and executives who have built real companies and
+            are invested in your success.</p>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">🧭</div>
+          <div class="card-title">Founder Guidance</div>
+          <p class="card-desc">Structured advice from people who've been through the early stages of building.
+            Frameworks that actually apply to your situation.</p>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="card-icon">⚡</div>
+          <div class="card-title">Weekly Sessions</div>
+          <p class="card-desc">Focused weekly sessions that push your company forward week over week, from idea
+            validation to pitch-ready execution.</p>
+        </div>
+        <div class="card reveal reveal-delay-4">
+          <div class="card-icon">🏆</div>
+          <div class="card-title">Summit X</div>
+          <p class="card-desc">The program culminates in Summit X, a high-stakes pitch event where selected founders
+            present to real investors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO SHOULD APPLY -->
+  <section id="who">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag reveal">Selectivity</div>
+        <h2 class="reveal reveal-delay-1">This program is built for the right founders.</h2>
+        <p class="reveal reveal-delay-2" style="max-width: 560px; margin: 0 auto;">Sentinel is intentionally selective.
+          We work with a small group of serious founders each cohort to ensure real, focused attention.</p>
+      </div>
+      <div class="who-grid">
+        <div class="who-card for reveal reveal-delay-1">
+          <h3 class="for-label">This is for you if —</h3>
+          <ul class="who-list">
+            <li>You have a startup idea you're serious about pursuing</li>
+            <li>You're ready to build, not just explore</li>
+            <li>You can commit real time to expanding your business</li>
+            <li>You want structured mentorship and investor exposure</li>
+            <li>You're a solo founder or a team that's ready to move</li>
+          </ul>
+        </div>
+        <div class="who-card not reveal reveal-delay-2">
+          <h3 class="not-label">This may not be the right fit if —</h3>
+          <ul class="who-list">
+            <li>You're still in the early brainstorming phase without a clear idea</li>
+            <li>You're looking for a passive, low-commitment experience</li>
+            <li>You're not prepared to dedicate serious time to building</li>
+            <li>You're looking for a casual campus club or social network</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT FOUNDERS GET -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag reveal">What You Get</div>
+        <h2 class="reveal reveal-delay-1">Everything a serious founder needs to move fast.</h2>
+        <p class="reveal reveal-delay-2" style="max-width: 580px; margin: 0 auto;">Sentinel is not a lecture series.
+          It's a structured, hands-on accelerator built to produce real outcomes.</p>
+      </div>
+      <div class="features-grid">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">📅</div>
+          <div class="card-title">Weekly Founder Sessions</div>
+          <p class="card-desc">Structured weekly sessions designed to get you the exact playbook your startup needs to prepare you for success and  
+            pitch to investors.</p>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">🛠</div>
+          <div class="card-title">Hands-On Startup Guidance</div>
+          <p class="card-desc">Actionable frameworks and direct feedback on your business, from idea refinement through
+            go-to-market strategy.</p>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="card-icon">👥</div>
+          <div class="card-title">Mentor Access</div>
+          <p class="card-desc">Connect with experienced founders and operators who provide real guidance, not generic
+            advice.</p>
+        </div>
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">🎤</div>
+          <div class="card-title">Pitch Preparation</div>
+          <p class="card-desc">Dedicated preparation for Summit X — including pitch refinement, storytelling coaching,
+            and investor-facing positioning.</p>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">🌐</div>
+          <div class="card-title">Founder Network</div>
+          <p class="card-desc">Join a community of serious student founders who will be your peers, collaborators, and
+            co-builders long after the cohort ends.</p>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="card-icon">💼</div>
+          <div class="card-title">Summit X Investor Exposure</div>
+          <p class="card-desc">The most selective founders present at Summit X — a curated pitch event with real
+            investors in the room.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag reveal">8 Weeks</div>
+        <h2 class="reveal reveal-delay-1">From application to investor stage.</h2>
+        <p class="reveal reveal-delay-2" style="max-width: 540px; margin: 0 auto;">A structured 8-week journey —
+          designed to compress years of trial-and-error into a focused, outcome-oriented sprint.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="tl-content reveal">
+            <div class="tl-num">Stage 01</div>
+            <div class="tl-title">Apply</div>
+            <div class="tl-desc">Submit your application with a short pitch video. Applications are reviewed on a
+              rolling basis starting March 18, 2026.</div>
+          </div>
+          <div class="tl-dot"></div>
+          <div class="tl-empty"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-empty"></div>
+          <div class="tl-dot"></div>
+          <div class="tl-content reveal">
+            <div class="tl-num">Stage 02</div>
+            <div class="tl-title">Selection</div>
+            <div class="tl-desc">A small group of serious founders are selected per cohort. Selectivity is intentional,
+              every seat matters.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-content reveal">
+            <div class="tl-num">Stage 03</div>
+            <div class="tl-title">Weekly Sessions</div>
+            <div class="tl-desc">Eight weeks of focused online sessions covering validation, strategy, product,
+              fundraising, and storytelling.</div>
+          </div>
+          <div class="tl-dot"></div>
+          <div class="tl-empty"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-empty"></div>
+          <div class="tl-dot"></div>
+          <div class="tl-content reveal">
+            <div class="tl-num">Stage 04</div>
+            <div class="tl-title">Build &amp; Refine</div>
+            <div class="tl-desc">Help you strengthen your business model/strategy, and past successful methods to optimize your business
+              </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-content reveal">
+            <div class="tl-num">Stage 05</div>
+            <div class="tl-title">Pitch Preparation</div>
+            <div class="tl-desc">Dedicated preparation for Summit X, refining your narrative, your deck, and your
+              ability to communicate your vision to investors.</div>
+          </div>
+          <div class="tl-dot"></div>
+          <div class="tl-empty"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-empty"></div>
+          <div class="tl-dot"></div>
+          <div class="tl-content reveal">
+            <div class="tl-num">Stage 06</div>
+            <div class="tl-title">Summit X</div>
+            <div class="tl-desc">Selected founders take the stage at Summit X and pitch their companies to real
+              investors.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTORS -->
+  <section id="mentors">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag reveal">Mentorship</div>
+        <h2 class="reveal reveal-delay-1">Learn from experienced founders, operators, and executives.</h2>
+        <p class="reveal reveal-delay-2" style="max-width: 580px; margin: 0 auto;">Our mentor network spans multiple
+          industries. Mentor identities are revealed to cohort members, here's the expertise they bring.</p>
+      </div>
+      <div class="mentor-grid">
+        <div class="mentor-card reveal reveal-delay-1">
+          <div class="mentor-icon">🚀</div>
+          <div class="mentor-area">Startup Strategy &amp; Innovation</div>
+          <p class="mentor-desc">Founders and operators who've built and scaled companies from zero. They know what the
+            early stage actually looks like.</p>
+        </div>
+        <div class="mentor-card reveal reveal-delay-2">
+          <div class="mentor-icon">📈</div>
+          <div class="mentor-area">Business Development &amp; Growth</div>
+          <p class="mentor-desc">Executives with experience driving revenue, building partnerships, and scaling
+            go-to-market motions at real companies.</p>
+        </div>
+        <div class="mentor-card reveal reveal-delay-3">
+          <div class="mentor-icon">💰</div>
+          <div class="mentor-area">Finance &amp; Operations</div>
+          <p class="mentor-desc">Operators and finance professionals who help founders understand unit economics,
+            fundraising mechanics, and company structure.</p>
+        </div>
+        <div class="mentor-card reveal reveal-delay-1">
+          <div class="mentor-icon">⚙️</div>
+          <div class="mentor-area">Technology &amp; Engineering</div>
+          <p class="mentor-desc">Senior engineers and CTOs who've built technical products at scale and know what to
+            build first (and what to skip).</p>
+        </div>
+        <div class="mentor-card reveal reveal-delay-2">
+          <div class="mentor-icon">🏥</div>
+          <div class="mentor-area">Healthcare &amp; Biotech Strategy</div>
+          <p class="mentor-desc">Domain experts in health and life sciences who understand the specific dynamics of
+            building in regulated, high-stakes industries.</p>
+        </div>
+        <div class="mentor-card reveal reveal-delay-3">
+          <div class="mentor-icon">🔬</div>
+          <div class="mentor-area">Research &amp; Commercialization</div>
+          <p class="mentor-desc">Experts who sit at the intersection of academic research and real-world application,
+            turning labs into markets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMIT X -->
+  <section id="summit">
+    <div class="summit-bg"></div>
+    <div class="container">
+      <div class="summit-inner">
+        <div class="summit-badge reveal">
+          <span>⚡</span> Summit X
+        </div>
+        <h2 class="reveal reveal-delay-1">The pitch event where serious founders meet real investors.</h2>
+        <p class="reveal reveal-delay-2" style="font-size: 1.1rem;">At the end of the cohort, selected founders take the
+          stage at Summit X. It's not a school competition. It's a high-stakes event built to put you in front of people
+          who can actually write a check.</p>
+        <div class="hero-btns reveal reveal-delay-3" style="margin-top: 36px;">
+          <a href="apply.html" class="btn btn-primary btn-lg">Apply for the Next Cohort</a>
+        </div>
+        <div class="summit-stats reveal reveal-delay-4">
+          <div class="summit-stat">
+            <div class="summit-stat-num">8</div>
+            <div class="summit-stat-label">Weeks of preparation</div>
+          </div>
+          <div class="summit-stat">
+            <div class="summit-stat-num">Real</div>
+            <div class="summit-stat-label">Investors in the room</div>
+          </div>
+          <div class="summit-stat">
+            <div class="summit-stat-num">High</div>
+            <div class="summit-stat-label">Stakes. Real outcomes.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER STORY PREVIEW -->
+  <section id="story">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag reveal">Our Story</div>
+        <h2 class="reveal reveal-delay-1">Built by people who've seen how hard it is to build alone.</h2>
+        <p class="reveal reveal-delay-2" style="max-width: 580px; margin: 0 auto;">Sentinel was created by student
+          founders who lived the problem firsthand and built the program they wished had existed.</p>
+      </div>
+      <div class="story-cards">
+        <div class="story-card reveal reveal-delay-1">
+          <div class="story-initial">A</div>
+          <div class="story-name">Aditya</div>
+          <div class="story-role">Founder</div>
+          <p class="story-text">Founded Sentinel after experiencing firsthand how difficult it was to build a startup in
+            college without the right support. After spending years building access to mentors and investors through
+            sheer perseverance, he created the program he wished had existed on day one.</p>
+        </div>
+        <div class="story-card reveal reveal-delay-2">
+          <div class="story-initial">M</div>
+          <div class="story-name">Mark</div>
+          <div class="story-role">Program</div>
+          <p class="story-text">Helps build the Sentinel program from the ground up and works closely with the founders
+            throughout the cohort experience, making sure every participant gets the real, focused support they came
+            for.</p>
+        </div>
+        <div class="story-card reveal reveal-delay-3">
+          <div class="story-initial">D</div>
+          <div class="story-name">Danush</div>
+          <div class="story-role">Community</div>
+          <p class="story-text">Leads recruiting and helps grow the Sentinel founder community, identifying serious
+            builders and bringing together the kind of cohort that makes everyone around them better.</p>
+        </div>
+      </div>
+      <div class="story-cta reveal reveal-delay-4">
+        <a href="about.html" class="btn btn-secondary btn-lg">Read Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION PROCESS -->
+  <section id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag reveal">How to Apply</div>
+        <h2 class="reveal reveal-delay-1">A straightforward, selective process.</h2>
+        <p class="reveal reveal-delay-2" style="max-width: 540px; margin: 0 auto;">We review every application
+          carefully. We're looking for seriousness, commitment, and a real idea, not a perfect pitch deck.</p>
+      </div>
+      <div class="process-steps reveal reveal-delay-2">
+        <div class="process-step">
+          <div class="process-num">1</div>
+          <div class="process-step-title">Apply</div>
+          <div class="process-step-desc">Submit your application with founder info, startup details, and a short YouTube
+            pitch video.</div>
+        </div>
+        <div class="progress-line"></div>
+        <div class="process-step">
+          <div class="process-num">2</div>
+          <div class="process-step-title">Review</div>
+          <div class="process-step-desc">Our team reviews applications on a rolling basis. Every application is read by
+            a real person.</div>
+        </div>
+        <div class="progress-line"></div>
+        <div class="process-step">
+          <div class="process-num">3</div>
+          <div class="process-step-title">Join the Cohort</div>
+          <div class="process-step-desc">Selected founders are contacted and join a small, focused cohort of serious
+            builders.</div>
+        </div>
+      </div>
+      <div class="process-meta">
+        <div class="process-meta-item reveal reveal-delay-1">
+          <strong>March 16, 2026</strong>
+          <span>Applications open</span>
+        </div>
+        <div class="process-meta-item reveal reveal-delay-2">
+          <strong>May 31, 2026</strong>
+          <span>Final deadline</span>
+        </div>
+        <div class="process-meta-item reveal reveal-delay-3">
+          <strong>Rolling Review</strong>
+          <span>Apply early for best consideration</span>
+        </div>
+        <div class="process-meta-item reveal reveal-delay-4">
+          <strong>Small Cohort</strong>
+          <span>Limited seats per cohort</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag reveal">FAQ</div>
+        <h2 class="reveal reveal-delay-1">Common questions.</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">Do I need a team to apply?<span class="faq-icon">+</span></button>
+          <div class="faq-a">
+            <p>No. Solo founders are welcome, though teams are encouraged. What matters most is your seriousness and
+              commitment to your idea.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-q">How much time does the program require?<span class="faq-icon">+</span></button>
+          <div class="faq-a">
+            <p>Commit to expanding your business, including weekly sessions and dedicated founder work time. This is a
+              meaningful commitment, and that's intentional.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-q">Do I need a startup idea before applying?<span class="faq-icon">+</span></button>
+          <div class="faq-a">
+            <p>Yes. Applicants must already have a startup idea and submit a short pitch video (under 3 minutes) as part
+              of the application. We're not an ideation program, we help you build.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-q">Is the program remote?<span class="faq-icon">+</span></button>
+          <div class="faq-a">
+            <p>Yes. Weekly sessions are held online, making the program accessible to student founders across New
+              Jersey, New York, and beyond.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-4">
+          <button class="faq-q">What happens at Summit X?<span class="faq-icon">+</span></button>
+          <div class="faq-a">
+            <p>At the end of the cohort, selected founders pitch their startups to real investors at Summit X, a
+              curated, high-stakes pitch event designed to create real investor connections for serious founders.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-5">
+          <button class="faq-q">Does Sentinel take equity?<span class="faq-icon">+</span></button>
+          <div class="faq-a">
+            <p>Yes. Sentinel takes a small equity stake in companies that complete the program. This aligns our
+              incentives with your success, we're invested in you building something real, not just graduating from a
+              program.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="final-cta">
+    <div class="final-cta-bg"></div>
+    <div class="container">
+      <div class="final-cta-inner">
+        <div class="tag reveal">Ready?</div>
+        <h2 class="reveal reveal-delay-1">If you're serious about building, this is where you start.</h2>
+        <p class="reveal reveal-delay-2">Apply to Sentinel Accelerator and take your first real step toward building a
+          company.</p>
+        <div class="reveal reveal-delay-3">
+          <a href="apply.html" class="btn btn-primary btn-lg">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Sentinel Accelerator"
+            onerror="this.parentNode.innerHTML='<span style=\'font-weight:800;font-size:1.05rem;letter-spacing:-0.02em;display:block;margin-bottom:12px\'>SENTINEL</span>'" />
+          <p class="footer-mission">Helping serious student founders turn ideas into real companies.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
             </a>
-            <div class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="apply.html">Apply</a>
-                <a href="apply.html" class="btn btn-primary">Apply Now</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.17a8.18 8.18 0 004.79 1.53V7.26a4.85 4.85 0 01-1.02-.57z" />
+              </svg>
+            </a>
+          </div>
         </div>
-    </nav>
-
-    <div class="apply-hero">
-        <div class="container">
-            <div class="tag reveal">Applications Open</div>
-            <h1 class="reveal reveal-delay-1">Apply to Sentinel Accelerator</h1>
-            <p class="reveal reveal-delay-2">Applications are open for serious student founders ready to commit to an
-                8-week accelerator experience. We review on a rolling basis — apply early.</p>
-            <div class="apply-meta reveal reveal-delay-3">
-                <span class="apply-meta-tag">8-week program</span>
-                <span class="apply-meta-tag">Online sessions</span>
-                <span class="apply-meta-tag">~10 hrs / week</span>
-                <span class="apply-meta-tag">Startup idea required</span>
-                <span class="apply-meta-tag">Teams preferred, solo OK</span>
-                <span class="apply-meta-tag">YouTube pitch required</span>
-                <span class="apply-meta-tag">Rolling review</span>
-                <span class="apply-meta-tag">Final deadline: May 31, 2026</span>
-            </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="apply.html">Apply</a></li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:adp.founder1@pfplus.org">adp.founder1@pfplus.org</a></li>
+            <li><a href="https://sentinelaccelerator.org" target="_blank">sentinelaccelerator.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Sentinel Accelerator. All rights reserved.</span>
+        <a href="mailto:adp.founder1@pfplus.org">adp.founder1@pfplus.org</a>
+      </div>
     </div>
+  </footer>
 
-    <div class="apply-form-section">
-        <div class="container">
-            <div class="form-wrap">
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
 
-                <div class="equity-notice reveal">
-                    <p><strong>Equity disclosure:</strong> Sentinel Accelerator takes a small equity stake in companies
-                        that complete the program. This aligns our success with yours — we are committed to helping you
-                        build something real.</p>
-                </div>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
 
-                <div class="progress-bar reveal reveal-delay-1" id="progress-bar">
-                    <div class="progress-step">
-                        <div class="progress-dot active" id="dot-1">1</div>
-                    </div>
-                    <div class="progress-line" id="line-1"></div>
-                    <div class="progress-step">
-                        <div class="progress-dot" id="dot-2">2</div>
-                    </div>
-                    <div class="progress-line" id="line-2"></div>
-                    <div class="progress-step">
-                        <div class="progress-dot" id="dot-3">3</div>
-                    </div>
-                    <div class="progress-line" id="line-3"></div>
-                    <div class="progress-step">
-                        <div class="progress-dot" id="dot-4">4</div>
-                    </div>
-                    <div class="progress-line" id="line-4"></div>
-                    <div class="progress-step">
-                        <div class="progress-dot" id="dot-5">5</div>
-                    </div>
-                    <div class="progress-line" id="line-5"></div>
-                    <div class="progress-step">
-                        <div class="progress-dot" id="dot-6">6</div>
-                    </div>
-                </div>
-
-                <form id="apply-form">
-
-                    <!-- STEP 1 -->
-                    <div class="step-panel active" id="step-1">
-                        <div class="step-title">Founder Information</div>
-                        <div class="step-subtitle">Tell us about yourself.</div>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="full-name">Full Name *</label>
-                                <input type="text" id="full-name" name="Full Name" placeholder="Your full name"
-                                    required />
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="Email" placeholder="your@email.com" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="Phone" placeholder="+1 (555) 000-0000" />
-                            </div>
-                            <div class="form-group">
-                                <label for="school">School / University *</label>
-                                <input type="text" id="school" name="School" placeholder="e.g. Rutgers University"
-                                    required />
-                            </div>
-                            <div class="form-group">
-                                <label for="grad-year">Expected Graduation Year *</label>
-                                <select id="grad-year" name="Graduation Year" required>
-                                    <option value="" disabled selected>Select year</option>
-                                    <option>2025</option>
-                                    <option>2026</option>
-                                    <option>2027</option>
-                                    <option>2028</option>
-                                    <option>2029</option>
-                                    <option>2030+</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(1)">Continue
-                                →</button>
-                        </div>
-                    </div>
-
-                    <!-- STEP 2 -->
-                    <div class="step-panel" id="step-2">
-                        <div class="step-title">Startup Information</div>
-                        <div class="step-subtitle">Tell us about your idea.</div>
-                        <div class="form-group">
-                            <label for="startup-name">Startup / Project Name *</label>
-                            <input type="text" id="startup-name" name="Startup Name" placeholder="What do you call it?"
-                                required />
-                        </div>
-                        <div class="form-group">
-                            <label for="describe">Describe your idea *</label>
-                            <textarea id="describe" name="Idea Description"
-                                placeholder="What are you building? Keep it clear and direct." required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="problem">What problem are you solving? *</label>
-                            <textarea id="problem" name="Problem" placeholder="Who has this problem? How painful is it?"
-                                required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="industry">Industry *</label>
-                            <select id="industry" name="Industry" required>
-                                <option value="" disabled selected>Select industry</option>
-                                <option>SaaS / Software</option>
-                                <option>Fintech</option>
-                                <option>Healthcare / Biotech</option>
-                                <option>Consumer</option>
-                                <option>Marketplace</option>
-                                <option>Hardware / Deep Tech</option>
-                                <option>Education</option>
-                                <option>AI / Machine Learning</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="target-customers">Who are your target customers or users? *</label>
-                            <textarea id="target-customers" name="Target Customers" placeholder="Who are they? consumer or business?"
-                                required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="market-size">How big is this market or opportunity? *</label>
-                            <textarea id="market-size" name="Market Size" placeholder="How much potential?"
-                                required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="why-now">Why now? Tell us, what traction or validation do you have so far, and 
-                                How did you get it? Also, describe what steps you and your team members are taking in 
-                                your life or career that would prove that you are all able to commit to your business 
-                                (200 words max) *</label>
-                            <textarea id="why-now" name="Why Now"
-                                placeholder="What's changed that makes this the right time?" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="competitors">Who are your competitors *</label>
-                            <input type="text" id="competitors" name="Competitors" placeholder="What are there names?"
-                                required />
-                        </div>
-                        <div class="form-group">
-                            <label for="differentiation">What’s innovative or differentiated about your solution? *</label>
-                            <textarea id="differentiation" name="Differentiation" placeholder="How are you unique?"
-                                required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="stage">What stage is your team at? *</label>
-                            <select id="stage" name="Stage" required>
-                                <option value="" disabled selected>Select stage</option>
-                                <option>Just an idea</option>
-                                <option>Built a prototype</option>
-                                <option>Filed or received a patent / Biotech</option>
-                                <option>Generating revenue</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="stage-other">If you answered "other" above, please explain here</label>
-                            <textarea id="stage-other" name="Stage Other"
-                                placeholder="e.g. pivoting strategy, stealth mode"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="biggest-challenge">What is your biggest challenge right now? *</label>
-                            <textarea id="biggest-challenge" name="Biggest Challenge" placeholder="Connections? Resources? Preparedness? Team?"
-                                required></textarea>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(2)">← Back</button>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(2)">Continue
-                                →</button>
-                        </div>
-                    </div>
-
-                    <!-- STEP 3 -->
-                    <div class="step-panel" id="step-3">
-                        <div class="step-title">Your Team</div>
-                        <div class="step-subtitle">Tell us who's building with you.</div>
-                        <div class="form-group">
-                            <label>Are you applying solo or as a team?</label>
-                            <div class="radio-group">
-                                <label class="radio-opt"><input type="radio" name="team-type" value="solo" /> Solo
-                                    founder</label>
-                                <label class="radio-opt"><input type="radio" name="team-type" value="team" />
-                                    Team</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="team-size">Team size (including you)</label>
-                            <select id="team-size" name="Team Size">
-                                <option value="" disabled selected>Select</option>
-                                <option>1 (solo)</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4+</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="team-background">Why is your team the right one to build this? Highlight relevant background or connection *</label>
-                            <textarea id="team-background" name="Team Background" placeholder="What makes you the perfect team to accomplish your goal?"
-                                required></textarea>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(3)">← Back</button>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(3)">Continue
-                                →</button>
-                        </div>
-                    </div>
-
-                    <!-- STEP 4 -->
-                    <div class="step-panel" id="step-4">
-                        <div class="step-title">Commitment</div>
-                        <div class="step-subtitle">We want to understand your level of seriousness.</div>
-                        <div class="form-group">
-                            <label for="why-sentinel">Why do you want to join Sentinel? *</label>
-                            <textarea id="why-sentinel" name="Why Sentinel"
-                                placeholder="Be specific. What are you hoping to get out of this? What are you building toward?"
-                                required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Are you prepared to commit approximately 10 hours per week for 8 weeks? *</label>
-                            <div class="radio-group">
-                                <label class="radio-opt"><input type="radio" name="time-commit" value="yes" required />
-                                    Yes</label>
-                                <label class="radio-opt"><input type="radio" name="time-commit" value="mostly" /> I'll
-                                    do my best</label>
-                                <label class="radio-opt"><input type="radio" name="time-commit" value="no" /> No</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Are you willing to continue pursuing the venture if serious investor interest
-                                emerges? *</label>
-                            <div class="radio-group">
-                                <label class="radio-opt"><input type="radio" name="investor-commit" value="yes"
-                                        required /> Yes</label>
-                                <label class="radio-opt"><input type="radio" name="investor-commit" value="unsure" />
-                                    Unsure</label>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(4)">← Back</button>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(4)">Continue
-                                →</button>
-                        </div>
-                    </div>
-
-                    <!-- STEP 5 -->
-                    <div class="step-panel" id="step-5">
-                        <div class="step-title">Links &amp; Pitch</div>
-                        <div class="step-subtitle">Help us learn more about you and your startup.</div>
-                        <div class="form-group">
-                            <label for="linkedin">LinkedIn Profile</label>
-                            <input type="url" id="linkedin" name="LinkedIn"
-                                placeholder="https://linkedin.com/in/yourname" />
-                        </div>
-                        <div class="form-group">
-                            <label for="deck-link">Deck / Demo / Website (optional)</label>
-                            <input type="url" id="deck-link" name="Deck or Demo Link"
-                                placeholder="Optional — share if you have something to show" />
-                        </div>
-                        <div class="form-group">
-                            <label for="pitch-video">YouTube Pitch Video Link *</label>
-                            <input type="url" id="pitch-video" name="YouTube Pitch Video"
-                                placeholder="https://youtube.com/watch?v=..." required />
-                            <p style="font-size:0.8rem; color:var(--text-dim); margin-top:8px;">Please keep your pitch
-                                video under 3 minutes. Cover: what you're building, who it's for, and why you. Unlisted
-                                videos are fine.</p>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(5)">← Back</button>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(5)">Continue
-                                →</button>
-                        </div>
-                    </div>
-
-                    <!-- STEP 6 -->
-                    <div class="step-panel" id="step-6">
-                        <div class="step-title">Review &amp; Submit</div>
-                        <div class="step-subtitle">Almost there. Please review the equity disclosure before submitting.
-                        </div>
-                        <div class="equity-notice" style="margin-bottom: 24px;">
-                            <p><strong>Equity:</strong> By submitting this application, you acknowledge that Sentinel
-                                Accelerator takes a small equity stake in companies that complete the program. This is
-                                disclosed upfront and reflects our commitment to your long-term success.</p>
-                        </div>
-                        <div class="form-group">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="equity-confirm" name="Equity Check" value="Acknowledged" required />
-                                <label for="equity-confirm">I understand and acknowledge the equity terms described
-                                    above.</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="commitment-confirm" name="Commitment Check" value="Confirmed" required />
-                                <label for="commitment-confirm">I confirm that the information provided in this
-                                    application is accurate.</label>
-                            </div>
-                        </div>
-                        <div class="form-row" style="margin-top: 32px;">
-                            <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(6)">← Back</button>
-                            <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">Submit Application
-                                →</button>
-                        </div>
-                        <p id="form-status" style="margin-top: 16px; font-size: 0.88rem; color: #e07070;"></p>
-                    </div>
-
-                </form>
-
-                <!-- SUCCESS STATE -->
-                <div class="submit-success" id="submit-success">
-                    <div class="success-icon">✓</div>
-                    <div class="success-title">Application received.</div>
-                    <p class="success-text">Thank you for applying to Sentinel Accelerator. Our team reviews
-                        applications on a rolling basis. If your application moves forward, we will contact you about
-                        the next step.</p>
-                    <div class="success-social">
-                        <a href="https://www.instagram.com/sentinelaccelerator/" target="_blank" class="btn btn-secondary">Follow on
-                            Instagram</a>
-                        <a href="https://www.tiktok.com/@sentinel_accelerator" target="_blank" class="btn btn-secondary">Follow on TikTok</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <img src="logo.png" alt="Sentinel Accelerator"
-                        onerror="this.parentNode.innerHTML='<span style=\'font-weight:800;font-size:1.05rem;letter-spacing:-0.02em;display:block;margin-bottom:12px\'>SENTINEL</span>'" />
-                    <p class="footer-mission">Helping serious student founders turn ideas into real companies.</p>
-                    <div class="footer-social">
-                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                            </svg>
-                        </a>
-                        <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.17a8.18 8.18 0 004.79 1.53V7.26a4.85 4.85 0 01-1.02-.57z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="apply.html">Apply</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:adp.founder1@pfplus.org">adp.founder1@pfplus.org</a></li>
-                        <li><a href="https://sentinelaccelerator.org" target="_blank">sentinelaccelerator.org</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 Sentinel Accelerator. All rights reserved.</span>
-                <a href="mailto:adp.founder1@pfplus.org">adp.founder1@pfplus.org</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Navbar
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-
-        // Scroll reveal
-        const reveals = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        reveals.forEach(el => observer.observe(el));
-        setTimeout(() => document.querySelectorAll('.apply-hero .reveal').forEach(el => el.classList.add('visible')), 100);
-
-        // Multi-step form
-        let currentStep = 1;
-        const totalSteps = 6;
-
-        function updateProgress(step) {
-            for (let i = 1; i <= totalSteps; i++) {
-                const dot = document.getElementById(`dot-${i}`);
-                if (i < step) { dot.className = 'progress-dot done'; dot.textContent = '✓'; }
-                else if (i === step) { dot.className = 'progress-dot active'; dot.textContent = i; }
-                else { dot.className = 'progress-dot'; dot.textContent = i; }
-            }
-            for (let i = 1; i < totalSteps; i++) {
-                const line = document.getElementById(`line-${i}`);
-                line.className = i < step ? 'progress-line done' : 'progress-line';
-            }
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
 
-        function showStep(step) {
-            document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
-            document.getElementById(`step-${step}`).classList.add('active');
-            updateProgress(step);
-            currentStep = step;
-            window.scrollTo({ top: document.querySelector('.apply-form-section').offsetTop - 80, behavior: 'smooth' });
-        }
+    // Hero section - immediately visible
+    document.querySelectorAll('#hero .reveal').forEach(el => {
+      setTimeout(() => el.classList.add('visible'), 100);
+    });
 
-        // Validate current step before proceeding
-        function validateStep(step) {
-            const currentPanel = document.getElementById(`step-${step}`);
-            const inputs = currentPanel.querySelectorAll('input, select, textarea');
-            for (let input of inputs) {
-                if (!input.checkValidity()) {
-                    input.reportValidity(); // Shows native browser error bubble
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        function nextStep(from) {
-            if (validateStep(from) && from < totalSteps) {
-                showStep(from + 1);
-            }
-        }
-
-        function prevStep(from) {
-            if (from > 1) {
-                showStep(from - 1);
-            }
-        }
-
-        // Form submission — uses FormData (Formspree's recommended AJAX method)
-        document.getElementById('apply-form').addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            // Final validation check just in case
-            if (!validateStep(6)) return;
-
-            const submitBtn = document.getElementById('submit-btn');
-            const statusEl = document.getElementById('form-status');
-            submitBtn.textContent = 'Submitting…';
-            submitBtn.disabled = true;
-            statusEl.textContent = '';
-
-            // Build FormData automatically from all named form elements
-            const formData = new FormData(e.target);
-            // Time and Investor commitment radio buttons will be included automatically
-            // if selected. If not selected, they shouldn't pass validation, but just in case:
-            if (!formData.get('time-commit')) formData.append('time-commit', 'Not selected');
-            if (!formData.get('investor-commit')) formData.append('investor-commit', 'Not selected');
-
-            fetch('https://formspree.io/f/xyknpjqe', {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(function (response) {
-                if (response.ok) {
-                    document.getElementById('apply-form').style.display = 'none';
-                    document.getElementById('progress-bar').style.display = 'none';
-                    document.querySelector('.equity-notice').style.display = 'none';
-                    document.getElementById('submit-success').classList.add('shown');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    response.json().then(function (data) {
-                        submitBtn.textContent = 'Submit Application →';
-                        submitBtn.disabled = false;
-                        statusEl.textContent = data.errors ? data.errors.map(function (e) { return e.message; }).join(', ') : 'Something went wrong. Please try again.';
-                    });
-                }
-            }).catch(function () {
-                submitBtn.textContent = 'Submit Application →';
-                submitBtn.disabled = false;
-                statusEl.textContent = 'Network error. Please check your connection and try again.';
-            });
-        });
-    </script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
 </body>
 
 </html>
