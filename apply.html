@@ -164,13 +164,13 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="problem">Who are your target customers or users? *</label>
-                            <textarea id="problem" name="Problem" placeholder="Who are they? consumer or business?"
+                            <label for="target-customers">Who are your target customers or users? *</label>
+                            <textarea id="target-customers" name="Target Customers" placeholder="Who are they? consumer or business?"
                                 required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="problem">How big is this market or opportunity? *</label>
-                            <textarea id="problem" name="Problem" placeholder="How much potential?"
+                            <label for="market-size">How big is this market or opportunity? *</label>
+                            <textarea id="market-size" name="Market Size" placeholder="How much potential?"
                                 required></textarea>
                         </div>
                         <div class="form-group">
@@ -182,34 +182,34 @@
                                 placeholder="What's changed that makes this the right time?" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="startup-name">Who are your competitors *</label>
-                            <input type="text" id="startup-name" name="Startup Name" placeholder="What are there names?"
+                            <label for="competitors">Who are your competitors *</label>
+                            <input type="text" id="competitors" name="Competitors" placeholder="What are there names?"
                                 required />
                         </div>
                         <div class="form-group">
-                            <label for="problem">What’s innovative or differentiated about your solution? *</label>
-                            <textarea id="problem" name="Problem" placeholder="How are you unique?"
+                            <label for="differentiation">What’s innovative or differentiated about your solution? *</label>
+                            <textarea id="differentiation" name="Differentiation" placeholder="How are you unique?"
                                 required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="industry">What stage is your team at? *</label>
-                            <select id="industry" name="Industry" required>
-                                <option value="" disabled selected>Select stage </option>
-                                <option>Just an idea </option>
+                            <label for="stage">What stage is your team at? *</label>
+                            <select id="stage" name="Stage" required>
+                                <option value="" disabled selected>Select stage</option>
+                                <option>Just an idea</option>
                                 <option>Built a prototype</option>
-                                <option>Files or received a patent / Biotech</option>
-                                <option>Generating revenue </option>
+                                <option>Filed or received a patent / Biotech</option>
+                                <option>Generating revenue</option>
                                 <option>Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="team-members">If you answered "other" above, please explain here</label>
-                            <textarea id="team-members" name="Team Members"
-                                placeholder="e.g. Jane Smith — CTO, John Doe — Head of Design"></textarea>
+                            <label for="stage-other">If you answered "other" above, please explain here</label>
+                            <textarea id="stage-other" name="Stage Other"
+                                placeholder="e.g. pivoting strategy, stealth mode"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="problem">What is your biggest challenge right now? *</label>
-                            <textarea id="problem" name="Problem" placeholder="Connections? Resources? Preparedness? Team?"
+                            <label for="biggest-challenge">What is your biggest challenge right now? *</label>
+                            <textarea id="biggest-challenge" name="Biggest Challenge" placeholder="Connections? Resources? Preparedness? Team?"
                                 required></textarea>
                         </div>
                         <div class="form-row">
@@ -243,9 +243,9 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="startup-name">Why is your team the right one to build this? Highlight relevant background or connection  *</label>
-                            <input type="text" id="startup-name" name="Startup Name" placeholder="What makes you the perfect team to accomplish your goal?"
-                                required />
+                            <label for="team-background">Why is your team the right one to build this? Highlight relevant background or connection *</label>
+                            <textarea id="team-background" name="Team Background" placeholder="What makes you the perfect team to accomplish your goal?"
+                                required></textarea>
                         </div>
                         <div class="form-row">
                             <button type="button" class="btn btn-secondary btn-lg" onclick="prevStep(3)">← Back</button>
@@ -332,14 +332,14 @@
                         </div>
                         <div class="form-group">
                             <div class="checkbox-group">
-                                <input type="checkbox" id="equity-confirm" required />
+                                <input type="checkbox" id="equity-confirm" name="Equity Check" value="Acknowledged" required />
                                 <label for="equity-confirm">I understand and acknowledge the equity terms described
                                     above.</label>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="checkbox-group">
-                                <input type="checkbox" id="commitment-confirm" required />
+                                <input type="checkbox" id="commitment-confirm" name="Commitment Check" value="Confirmed" required />
                                 <label for="commitment-confirm">I confirm that the information provided in this
                                     application is accurate.</label>
                             </div>
@@ -412,7 +412,7 @@
             </div>
             <div class="footer-bottom">
                 <span>© 2026 Sentinel Accelerator. All rights reserved.</span>
-                <a href="adp.founder1@pfplus.org">adp.founder1@pfplus.org</a>
+                <a href="mailto:adp.founder1@pfplus.org">adp.founder1@pfplus.org</a>
             </div>
         </div>
     </footer>
@@ -496,26 +496,12 @@
             submitBtn.disabled = true;
             statusEl.textContent = '';
 
-            // Build FormData from all named fields
-            const formData = new FormData();
-            formData.append('Full Name', document.getElementById('full-name').value);
-            formData.append('Email', document.getElementById('email').value);
-            formData.append('Phone', document.getElementById('phone').value);
-            formData.append('School', document.getElementById('school').value);
-            formData.append('Graduation Year', document.getElementById('grad-year').value);
-            formData.append('Startup Name', document.getElementById('startup-name').value);
-            formData.append('Idea Description', document.getElementById('describe').value);
-            formData.append('Problem', document.getElementById('problem').value);
-            formData.append('Industry', document.getElementById('industry').value);
-            formData.append('Why Now', document.getElementById('why-now').value);
-            formData.append('Team Size', document.getElementById('team-size').value);
-            formData.append('Team Members', document.getElementById('team-members').value);
-            formData.append('Why Sentinel', document.getElementById('why-sentinel').value);
-            formData.append('Time Commitment', document.querySelector('input[name="time-commit"]:checked')?.value || 'Not selected');
-            formData.append('Investor Commitment', document.querySelector('input[name="investor-commit"]:checked')?.value || 'Not selected');
-            formData.append('LinkedIn', document.getElementById('linkedin').value);
-            formData.append('Deck or Demo Link', document.getElementById('deck-link').value);
-            formData.append('YouTube Pitch Video', document.getElementById('pitch-video').value);
+            // Build FormData automatically from all named form elements
+            const formData = new FormData(e.target);
+            // Time and Investor commitment radio buttons will be included automatically
+            // if selected. If not selected, they shouldn't pass validation, but just in case:
+            if (!formData.get('time-commit')) formData.append('time-commit', 'Not selected');
+            if (!formData.get('investor-commit')) formData.append('investor-commit', 'Not selected');
 
             fetch('https://formspree.io/f/xyknpjqe', {
                 method: 'POST',
